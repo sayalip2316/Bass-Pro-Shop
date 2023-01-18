@@ -29,9 +29,9 @@
         #navbar>div:nth-child(1){
             font-size: 17px;
         }
-        /* #navbar>div:nth-child(2){
+        #navbar>div:nth-child(2){
             font-size: 17px;
-        } */
+        }
         #right{
 
             margin-right: 150px;
@@ -69,8 +69,8 @@
         }
         #search{
             font-size: 17px;
-            width:300%;
-            height:40px;
+            width:250%;
+            height:30px;
             border-radius: 20px;
             border: none;
             background-color: #E5E5E5;
@@ -94,51 +94,80 @@
         text-align: center;
         color: #213629;
        }
-       #left-side{
+       #form{
+        width:300%;
+        height:40px;
         display:flex;
-        gap:30px;
-       }
-       #right-side{
-        display:flex;
-        gap:20px;
-        font-size: 15px;
-       }
-       #logo-left{
-        display: flex;
         align-items: center;
-        justify-content: space-between;
+        background-color: #E5E5E5;
+        border-radius: 20px;
+        border: none;
        }
-       @media screen and (min-width:500px) and (max-width:1000px){
-        #navbar{
-            width:100%;
-            height:auto;
-            padding-left: 20px;
-            padding-right: 20px;
-            box-sizing: border-box;
-            border-bottom: 1px solid #E5E5E5;
-            display:flex;
-            margin:auto;
-            justify-content: space-around;
-            align-items: center;
-            font-size: 15px;
-        }
-        #left-side{
-            flex-direction: column;
-        }
-        #right-side{
-           display:none;
-        }
+       .product-container{
+        padding: 0 10vw;
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+      }
+      .product-container::-webkit-scrollbar{
+       display: none;
        }
+       .product-card{
+        flex: 0 0 auto;
+        width: 250px;
+        height: 450px;
+        margin-right: 40px;
+       }
+       .product-image{
+       position: relative;
+       width: 100%;
+       height: 350px;
+      text-align: center;
+      }
+      .product-thumb{
+       width: 100%;
+       height: 350px;
+       object-fit: cover;
+       }
+       .product-card:hover.product-card{
+        opacity: 1;
+       }
+       .product-card:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       }
+       .pre-btn, .nxt-btn{
+        /* border: none;  */
+        width: 4vw;
+       height: 70%;
+       position: absolute;
+       /* bottom: 0; */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+       cursor: pointer;
+       z-index: 8;
+     }
+     .pre-btn{
+    left: 0;
+    transform: rotate(180deg);
+    }
+    .nxt-btn{
+    right: 0;
+    } 
+     .pre-btn img, .nxt-btn img{
+    opacity: 0.2;
+    } 
+    .pre-btn:hover img, .nxt-btn:hover img{
+    opacity: 1;
+    }
     </style>
 </head>
 <body>
     <div id="navbar">
-        <div id="left-side">
         <div>
-            <img id="location" src="./location2.jpg" alt="error">My Store:<span id="blue"> Find A Store</span></div>
+            <img id="location" src="./assets/location2.jpg" alt="error">My Store:<span id="blue"> Find A Store</span></div>
         <div id="right"><span id="red">FREE</span> Shipping on Orders $50+</div>
-    </div>
-    <div id="right-side">
         <div id="left">Boats</div>
         <div>Off Road</div>
         <div>Resorts & Restaurants</div>
@@ -147,22 +176,20 @@
         <div>Gift Cards</div>
         <div>Help🍁</div>
         <div>Canada</div>
-    </div>
 </div>
 <div id="navbar-2">
-    <div id="logo-left">
-    <div><img id="logo" src="./Cart Bass.png" alt="error"></div>
+    <div><img id="logo" src="./assets/Cart Bass.png" alt="error"></div>
     <div>
         <form>
-            <input type="text" placeholder="🔍What can we help you find?" id="search">
+            <div id="form">
+            <img src="https://img.icons8.com/ios-glyphs/30/null/search--v1.png"/>
+            <input type="text" placeholder="What can we help you find?" id="search">
+        </div>
         </form>
     </div>
-    </div>
-    <div id="logo-right">
     <div>
-        <img id="profile" src="./profile image.jpg" alt="error">
-        <img src="./add to cart.jpg" alt="error">
-    </div>
+        <img id="profile" src="./assets/profile image.jpg" alt="error">
+        <img src="./assets/add to cart.jpg" alt="error">
     </div>
 </div>
 <div id="navbar-3">
@@ -183,7 +210,86 @@
     </div>
     <div>
         <h1>HOT THIS WEEK</h1>
+</div>
+<div id="container-1"></div>
+
+<div class="product-container">
+<button class="pre-btn"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/64/external-left-arrow-arrows-dreamstale-lineal-dreamstale-12.png" alt=""></button>
+<button class="nxt-btn"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/64/external-right-arrow-arrows-dreamstale-lineal-dreamstale-13.png" alt=""></button>
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3473540.json?$Prod_PLPThumb$" class="product-thumb" alt="">
+            <h2 class="product-brand">YETI Coolers</h2>
+            <span class="discount-tag">Save 20% on Select Colors</span>
+            <p class="Sale">Sale Starting at $64</p>
+            <p class="Reg"></p>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/2593481.json?$Prod_PLPThumb$" class="product-thumb" alt="">
+            <h2 class="product-brand">German Panotix LiveScope Transducer</h2>
+            <span class="discount-tag">Save $500 Off Orig.</span>
+            <p class="Sale">Sale $999.98</p>
+            <p class="Reg">Orig.$1499.99</p>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3417444.json?$Prod_PLPThumb$" class="product-thumb" alt="">
+            <h2 class="product-brand">SpyPoint FLEX Cellular Trail Camera</h2>
+            <span class="discount-tag">Save $50</span>
+            <p class="Sale">Sale $99.98</p>
+            <p class="Reg">Reg.$149.99</p>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3037740.json?$Prod_PLPThumb$" class="product-thumb" alt="">
+            <h2 class="product-brand">Cabela's Comfort Trac 2,000 Gram Insulate Rubber Book</h2>
+            <span class="discount-tag">Save $40</span>
+            <p class="Sale">Sale $109.98</p>
+            <p class="Reg">Reg.$149.99</p>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3443007.json?$Prod_PLPThumb$" class="product-thumb" alt="">
+            <h2 class="product-brand">Redhead Buffalo Creek Flannel for Men</h2>
+            <span class="discount-tag">Save 50</span>
+            <p class="Sale">Sale Starting at $14.98</p>
+            <p class="Reg">Reg Starting at $29.99</p>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/2428284.json?$Prod_PLPThumb$" class="product-thumb" alt="">
+            <h2 class="product-brand">FOXPRO Patriot Electronic Game Call</h2>
+            <span class="discount-tag">Save $20</span>
+            <p class="Sale">Sale $129.98</p>
+            <p class="Reg">Reg $149.99</p>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3212765.json?$Prod_PLPThumb$" class="product-thumb" alt="">
+            <h2 class="product-brand">Bass Pro Shops Pro Qualifier Casting Rod</h2>
+            <span class="discount-tag">Club Members Earn An Extra $20 In Points</span>
+            <p class="Sale">$99.99</p>
+            <p class="Reg"></p>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3376495.json?$Prod_PLPThumb$" class="product-thumb" alt="">
+            <h2 class="product-brand">Natural Reflections Acid Wash Plaid Long-Sleeve Shirt for Ladies</h2>
+            <span class="discount-tag">Save 25%</span>
+            <p class="Sale">Sale Starting at $25.97</p>
+            <p class="Reg">Reg. Starting at $34.99</p>
+        </div>
     </div>
 </div>
 </body>
+<script>
+</script>
 </html>
