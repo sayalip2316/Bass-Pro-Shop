@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Container"></div>
+    <form>
+        <input type="email" placeholder="Enter email" id="email">
+        <input type="password" placeholder="Enter password" id="password">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<script>
+    let formEl=document.querySelector("form");
+    let emailInp=document.getElementById("email");
+    let passwordInp=document.getElementById("password");
+
+    let data=JSON.parse(localStorage.getItem("info"));
+    if(data==null){
+        data=[];
+    }
+    formEl.addEventListener("submit",(e)=>{
+        e.preventDefault();
+
+        let formdata={
+            email:emailInp.value,
+            password:passwordInp.value,
+        }
+
+        data.push(formdata);
+        localStorage.setItem("info",JSON.stringify(data));
+    });
+</script>
+</html>
