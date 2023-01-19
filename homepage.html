@@ -12,6 +12,7 @@
         body{
             margin: 0px;
             padding: 0px;
+            box-sizing: border-box;
         }
         #navbar{
             width:100%;
@@ -104,7 +105,8 @@
         border: none;
        }
        .product-container{
-        padding: 0 10vw;
+        box-sizing: border-box;
+        padding: 5px 5px;
         display: flex;
         overflow-x: auto;
         scroll-behavior: smooth;
@@ -115,8 +117,9 @@
        .product-card{
         flex: 0 0 auto;
         width: 250px;
-        height: 450px;
-        margin-right: 40px;
+        height: 550px;
+        margin-right: 50px;
+        padding: 10px;
        }
        .product-image{
        position: relative;
@@ -127,7 +130,7 @@
       .product-thumb{
        width: 100%;
        height: 350px;
-       object-fit: cover;
+       /* object-fit: cover; */
        }
        .product-card:hover.product-card{
         opacity: 1;
@@ -136,7 +139,7 @@
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
        }
        .pre-btn, .nxt-btn{
-        /* border: none;  */
+        border: none; 
         width: 4vw;
        height: 70%;
        position: absolute;
@@ -161,6 +164,116 @@
     .pre-btn:hover img, .nxt-btn:hover img{
     opacity: 1;
     }
+    #club{
+        width:100%;
+        margin:auto;
+        position: relative;
+        text-align: center;
+        margin-top: 50px;
+        box-sizing: border-box;
+    }
+    #club>img{
+        width:100%;
+        margin:auto;
+    }
+    .centered{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+   }
+   #white{
+    color:white;
+  }
+  #yellow{
+    color:#EFB628;
+  }
+  .centered>button{
+     padding: 10px;
+     font-size: 20px;
+     border:2px solid white;
+  }
+  .centered>button:hover{
+    background-color: #9E1000;
+    color: white;
+  }
+  .imgcontainer{
+        width:100%;
+        display:flex;
+        /* justify-content: space-between; */
+        position: relative;
+        margin-top: 50px;
+        box-sizing: border-box;
+  }
+  .imgcontainer img{
+    display: block;
+    margin:auto;
+    width:98%;    
+    gap:30px;
+  }
+  #centered-2{
+     position: absolute;
+     top: 60%;
+     left: 9%;
+     transform: translate(-50%, -50%);
+     color:white;
+  }
+  #centered-2>button{
+     padding: 10px;
+     font-size: 20px;
+     border:2px solid white;
+  }
+  #centered-2>button:hover{
+    opacity: 0.2;
+  }
+  #centered-3{
+     position: absolute;
+     top: 65%;
+     right: 25%;
+     transform: translate(-50%, -50%);
+     color:white;
+  }
+  #centered-3>button{
+     padding: 10px;
+     font-size: 20px;
+     border:2px solid white;
+  }
+  #centered-3>button:hover{
+    opacity: 0.2;
+  }
+  #green{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #213629;
+    font-family: "Bebas Neue", Arial, Charcoal, sans-serif;
+  }
+.category{
+    display:flex;
+    justify-content: space-between;
+    text-align: center;
+    font-family: "Bebas Neue", Arial, Charcoal, sans-serif;
+}
+.yellowbar{
+    width:100%;
+    height:100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFE200;
+    margin-top: 10px;
+}
+.text{
+    display:flex;
+    align-items: center;
+    gap:10px;
+}
+.yellowbar button{
+    padding: 20px;
+    font-size: 20px;
+    background-color: black;
+    color:white;
+}
     </style>
 </head>
 <body>
@@ -214,7 +327,7 @@
 <div id="container-1"></div>
 
 <div class="product-container">
-<button class="pre-btn"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/64/external-left-arrow-arrows-dreamstale-lineal-dreamstale-12.png" alt=""></button>
+<button class="pre-btn"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/64/external-right-arrow-arrows-dreamstale-lineal-dreamstale-13.png" alt=""></button>
 <button class="nxt-btn"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/64/external-right-arrow-arrows-dreamstale-lineal-dreamstale-13.png" alt=""></button>
     <div class="product-card">
         <div class="product-image">
@@ -289,7 +402,80 @@
         </div>
     </div>
 </div>
+<div id="club">
+   <img src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_1440/v1673968097/DigitalCreative/2023/Homepage/wk2-1-11/cep-banner.png" alt="error">
+   <div class="centered">
+    <h1 ID="white">EXCLUSIVE</h1>
+    <h2 id="yellow">CLUB MEMBER SAVINGS</h2>
+    <button>SHOP NOW</button>
+   </div>
+</div>
+<div class="imgcontainer">
+    <div>
+        <img src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_945/v1673279793/DigitalCreative/2023/Homepage/wk2-1-11/After-hunt-sub.png" alt="error">
+        <div id="centered-2">
+        <h1>AFTER</h1>
+        <h1>THE HUNT</h1>
+        <button>SHOP NOW</button>
+    </div>
+    </div>
+    <div>
+        <img src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_945/v1673279793/DigitalCreative/2023/Homepage/wk2-1-11/BPS_saltwater-sub.png" alt="error">
+        <div id="centered-3">
+        <h1>SALTWATER</h1>
+        <button>SHOP NOW</button>
+    </div>
+    </div>
+</div>
+<h1 id="green">SHOP BY CATEGORY</h1>
+<div class="category">
+   <div>
+    <img src="https://assets.basspro.com/image/upload/f_auto,q_auto/v1664485701/DigitalCreative/2022/Homepage/wk39/Cat-archery.png" alt="error">
+    <h3>ARCHERY</h3>
+   </div>
+   <div>
+    <img src="https://assets.basspro.com/image/upload/f_auto,q_auto/v1664485701/DigitalCreative/2022/Homepage/wk39/Cat-optics.png" alt="error">
+    <h3>OPTICS</h3>
+   </div>
+   <div>
+    <img src="https://assets.basspro.com/image/upload/f_auto,q_auto/v1664485701/DigitalCreative/2022/Homepage/wk39/Cat-hunting-Waders.png" alt="error">
+    <h3>HUNTING WADERS</h3>
+   </div>
+   <div>
+    <img src="https://assets.basspro.com/image/upload/f_auto,q_auto/v1664485701/DigitalCreative/2022/Homepage/wk39/Cat-flannel.png" alt="error">
+    <h3>FLANNEL</h3>
+   </div>
+</div>
+<div class="yellowbar">
+    <div class="text">
+        <div>
+        <h1>LOW PRICE GAURANTEE |</h1>
+        </div>
+        <div>
+        <p>WE SIMPLY WILL NOT BE UNDERSOLD</p>
+        </div>
+    </div>
+        <div>
+        <button>Learn More</button>
+        </div>
+</div>
 </body>
 <script>
+    let productContainers =document.querySelectorAll('.product-container');
+let nxtBtn = document.querySelectorAll('.nxt-btn');
+let preBtn = document.querySelectorAll('.pre-btn');
+
+productContainers.forEach((item, i) => {
+    let containerDimenstions = item.getBoundingClientRect();
+    let containerWidth = containerDimenstions.width;
+
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})
 </script>
 </html>
