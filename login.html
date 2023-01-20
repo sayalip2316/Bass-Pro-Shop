@@ -109,21 +109,25 @@ let formEl=document.querySelector("form");
     if(data1==null){
         data1=[];
     }
-
+    // console.log(data1);
+let count=0;
 formEl.addEventListener("submit",(e)=>{
-        e.preventDefault();
+    e.preventDefault();
 
-        function signIn(data1){
-            data1.forEach((el,i)=>{
-                if(el.email==emailInp.value && el.password==passwordInp.value){
-                alert("Login Successfull");
-                // window.location.href="./home.html"
-               }else{
-                alert("Wrong Credentials");
-               }
-            })
-        }
-        signIn(data1);
-});
+    data1.forEach((element)=>{
+       if(element.email==emailInp.value && element.password==passwordInp.value){
+        count++;
+        
+       }
+    })
+    if(count>0){
+        alert("Login Successfull");
+        window.location.href="homepage.html";
+    }else{
+        alert("Wrong Credentials");
+    }
+})
+
+
 </script>
 </html>

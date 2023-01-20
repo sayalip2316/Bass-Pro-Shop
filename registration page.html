@@ -353,7 +353,7 @@
     <div><img id="logo" src="./assets/Cart Bass.png" alt="error"></div>
     <div>
         <form>
-            <div id="form">
+            <div id="form-2">
             <img src="https://img.icons8.com/ios-glyphs/30/null/search--v1.png"/>
             <input type="text" placeholder="What can we help you find?" id="search">
         </div>
@@ -655,7 +655,7 @@
      <p>City*</p>
      <input type="text" id="city">
      <p>State*</p>
-     <select id="country-state" name="country-state">
+     <select id="countrystate" name="country-state">
         <option value="AN">Andaman and Nicobar Islands</option>
         <option value="AP">Andhra Pradesh</option>
         <option value="AR">Arunachal Pradesh</option>
@@ -765,7 +765,7 @@
             </div>
             <div>
                 <h4>SIGN UP FOR EXCLUSIVE DEALS & OFFERS</h4>
-                <input type="text" placeholder="Enter your email address" id="email">
+                <input type="text" placeholder="Enter your email address" id="email-2">
                 <p>You can unsubscribe at any time.<span> Contact Us</span> | <span>Privacy Policy</span></p>
                 <div id="agree">
                     <div></div>
@@ -867,7 +867,7 @@
     let lastname=document.getElementById("lastname");
     let address=document.getElementById("address");
     let city=document.getElementById("city");
-    let state=document.getElementById("country-state");
+    let state=document.getElementById("countrystate");
     let zip=document.getElementById("zip");
     let mobile=document.getElementById("phone");
     let reset=document.getElementById("cancel");
@@ -876,6 +876,7 @@
     if(data==null){
         data=[];
     }
+    console.log(data);
     formEl.addEventListener("submit",(e)=>{
         e.preventDefault();
 
