@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width:100%;
+            height:auto;
+            display: grid;
+           
+            grid-template-columns: repeat(4,1fr);
+            gap:10px;
+        }
+        #container>div{
+            width:50%;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+        }
+        #container>div:hover{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #container>div>img{
+            width:100%;
+        }
+        button{
+            font-size: 15px;
+            padding: 10px;
+           
+        }
+        button:hover{
+            background-color: skyblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    </div>
+</body>
+<script>
+    const API="https://63cac33df36cbbdfc75fad7f.mockapi.io/product";
+    let container=document.getElementById("container");
+    let fetchedData=[];
+
+    let cartData=JSON.parse(localStorage.getItem("cart"));
+    if(cartData==null){
+        cartData=[];
+    }
+
+    fetchData();
+    async function fetchData(){
+        try {
+       let request=await fetch(API);
+       let data=await request.json();
+       fetchedData=data;
+          desplay(fetchedData);
+        } catch (error) {
+            console.log(error);
+        }
+       
+    }
+
+    function desplay(fetchedData){
+        container.innerHTML="";
+        fetchedData.forEach((product)=>{
+
+            let card=document.createElement("div");
+
+            let img=document.createElement("img");
+            img.setAttribute("src",product.image);
+
+            let title=document.createElement("h3");
+            title.innerText=product.title;
+
+            let rating=document.createElement("h4");
+            rating.innerText="Rating"+" "+product.rating;
+
+            let price=document.createElement("h4");
+            price.innerText=`₹${product.price}`;
+
+            let add_to_cart=document.createElement("button");
+            add_to_cart.innerText="Add to Cart";
+
+            add_to_cart.addEventListener("click",()=>{
+                if(checkDuplicate(product)){
+                    alert("Product already in cart");
+                }else{
+                    cartData.push(product);
+                localStorage.setItem("cart",JSON.stringify(cartData));
+                alert("Product added to cart");
+                }
+                
+            })
+
+            card.append(img,title,rating,price,add_to_cart);
+            container.append(card);
+        })
+    }
+    desplay(fetchedData);
+
+    function checkDuplicate(product){
+        for(let i=0;i<cartData.length;i++){
+            if(cartData[i].id==product.id){
+                return true;
+            }
+        }
+        return false;
+    }
+</script>
+</html>
