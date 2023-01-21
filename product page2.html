@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #navbar{
+            width:100%;
+            height:40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #E5E5E5;
+            display:flex;
+            margin:auto;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 15px;
+        }
+        #navbar>div:nth-child(1){
+            font-size: 17px;
+        }
+        #navbar>div:nth-child(2){
+            font-size: 17px;
+        }
+        #right{
+
+            margin-right: 150px;
+        }
+        #left{
+            margin-left: 150px;
+        }
+        #blue{
+            color:#0065D4;
+        }
+        #red{
+            color:#CC5500;
+        }
+        #location{
+            width:15px;
+            height:15px;
+        }
+        #navbar-2{
+            width:100%;
+            height:100px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 60px;
+            padding-right: 60px;
+            border: 1px solid #E5E5E5;
+        }
+        #navbar-2>div:nth-child(2){
+            margin-right: 400px;
+        }
+        #logo{
+            width:100px;
+            height:100px;
+        }
+        #search{
+            font-size: 17px;
+            width:250%;
+            height:30px;
+            border-radius: 20px;
+            border: none;
+            background-color: #E5E5E5;
+        }
+       #navbar-3{
+        height:40px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid #E5E5E5;
+        font-size: 17px;
+       }
+        #container{
+            width:100%;
+            height:auto;
+            display: grid;
+           
+            grid-template-columns: repeat(4,1fr);
+            gap:10px;
+        }
+        #container>div{
+            width:50%;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+        }
+        #container>div:hover{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #container>div>img{
+            width:100%;
+        }
+        button{
+            font-size: 15px;
+            padding: 10px;
+           
+        }
+        button:hover{
+            background-color: skyblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .footerMain{
+    width:100%;
+    height: auto;
+    background-color: #F7F4EC;
+}
+.footerMain p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.footer{
+    width:100%;
+    height:auto;
+    /* margin-left: 30px; */
+}
+.footer-1{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#chat{
+    display:flex;
+}
+#chat>img{
+    width:20%;
+    height: 50px;
+    display:block;
+    margin: auto;
+}
+#mail{
+    display:flex;
+}
+#mail>img{
+    width:25%;
+    height: 50px;
+    display:block;
+    margin: auto;
+}
+#call{
+    display:flex;
+}
+#call>img{
+    width:20%;
+    height: 50px;
+    display:block;
+    margin: auto;
+}
+#faq{
+    display:flex;
+}
+#faq>img{
+    width:25%;
+    height: 50px;
+    display:block;
+    margin: auto;
+}
+#agree{
+    display: flex;
+    align-items: center;
+}
+#agree>div{
+    width:15px;
+    height:15px;
+    border:1px solid black;
+    margin-right: 10px;
+}
+#sms{
+    display: flex;
+    align-items: center;
+}
+#book{
+    display: flex;
+    align-items: center;
+}
+#mobile{
+    display: flex;
+    align-items: center;
+}
+.footer-2{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: "Bebas Neue", Arial, Charcoal, sans-serif;
+}
+
+.footer-2>div:nth-child(1){
+    width:20%;
+}
+.footer-2>div:nth-child(2){
+    width:20%;
+}
+.footer-2>div:nth-child(3){
+    width:20%;
+}
+.footer-2>div:nth-child(4){
+    width:35%;
+}
+.footer-2 input{
+    font-size: 20px;
+    font-family: Cabin, sans-serif;
+}
+.footer-2 button{
+    padding: 10px;
+    font-size: 15px;
+    font-family: Cabin, sans-serif;
+    background-color: #E5E5E5;
+    color: #7A6464;
+    border: none;
+}
+.footer-2 hr{
+    width:90%;
+    display: flex;
+    align-items:baseline;
+}
+.footer-3{
+    width:100%;
+    height:100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top:1px solid #D5D5D5;
+    border-bottom:1px solid #D5D5D5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.footer-4{
+    width:100%;
+    height: auto;
+    font-family: Cabin, sans-serif;
+    margin-left: 30px;
+}
+.card-1{
+    display: flex;
+    gap:20px;
+    font-family: Cabin, sans-serif;
+}
+#red-2{
+    color:red;
+}
+.card-2{
+    display: flex;
+    gap:20px;
+    font-family: Cabin, sans-serif;
+}
+#form{
+        width:300%;
+        height:40px;
+        display:flex;
+        align-items: center;
+        background-color: #E5E5E5;
+        border-radius: 20px;
+        border: none;
+       }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div>
+            <img id="location" src="./assets/location2.jpg" alt="error">My Store:<span id="blue"> Find A Store</span></div>
+        <div id="right"><span id="red">FREE</span> Shipping on Orders $50+</div>
+        <div id="left">
+            <a href="#">Boats</a>
+        </div>
+        <div>
+            <a href="#">Off Road</a>
+        </div>
+        <div>
+            <a href="#">Resorts & Restaurants</a>
+        </div>
+        <div>
+            <a href="#">Outdoor Tips</a>
+        </div>
+        <div>
+            <a href="#">CLUB</a>
+        </div>
+        <div>
+            <a href="#">Gift Cards</a>
+        </div>
+        <div>
+            <a href="#">Help🍁</a>
+        </div>
+        <div>
+            <a href="#">Canada</a>
+        </div>
+</div>
+<div id="navbar-2">
+    <div><img id="logo" src="./assets/Bass Pro (1).png" alt="error"></div>
+    <div>
+        <form class="searchForm">
+            <div id="form">
+            <img src="https://img.icons8.com/ios-glyphs/30/null/search--v1.png"/>
+            <input type="text" placeholder="What can we help you find?" id="search">
+        </div>
+        </form>
+    </div>
+    <div>
+        <img id="profile" src="./assets/profile image.jpg" alt="error">
+        <img src="./assets/add to cart.jpg" alt="error">
+    </div>
+</div>
+<div id="navbar-3">
+<div>Fishing</div>
+<div>Boating</div>
+<div>Shooting</div>
+<div>Hunting</div>
+<div>Camping</div>
+<div>Clothing</div>
+<div>Footwear</div>
+<div>Ride</div>
+<div>Home & Gifts</div>
+<div>Bargain Cave</div>
+</div>
+    <div id="container">
+    </div>
+    <div class="footerMain">
+        <div class="footer">
+            <div class="footer-1">
+                <h3>CONTACT BASS PRO SHOPS</h3>
+                <div id="chat">
+                    <img src="./assets/live chat.jpg" alt="">
+                    <h5>Live Chat</h5>
+                </div>
+                <div id="mail">
+                    <img src="./assets/mail image.jpg" alt="">
+                    <h5>Email Us</h5>
+                </div>
+                <div id="call">
+                    <img src="./assets/calling image.jpg" alt="">
+                    <h5>1-800-227-7776</h5>
+                </div>
+                <div id="faq">
+                    <img src="./assets/question mark.jpg" alt="">
+                    <h5>FAQs</h5>
+                </div>
+                <div>
+                    <h5>Support ID: UBD289273149 ?</h5>
+                </div>
+            </div>
+            <div class="footer-2">
+                <div>
+                    <h4>HELP</h4>
+                    <p>Order Status</p>
+                    <p>Returns</p>
+                    <p>Shipping Information</p>
+                    <p>Product Subscriptions</p>
+                    <p>Size Chart</p>
+                    <p>Embroidery Services</p>
+                    <p>Rod & Reel Repair</p>
+                    <p>Boat & Boat Centers</p>
+                    <p>Tracker Off-Road</p>
+                </div>
+                <div>
+                    <h4>RESOURCES</h4>
+                    <p>Outdoor Tips</p>
+                    <p>Gift Registry</p>
+                    <p>Online Catalogs</p>
+                    <p>Business Sales</p>
+                    <p>Wildlife Creations</p>
+                    <p>Military Discount</p>
+                    <p>Restaurants</p>
+                    <p>Used Guns</p>
+                    <p>Outdoor Rewards</p>
+                </div>
+                <div>
+                    <h4>ABOUT US</h4>
+                    <p>Find a Store</p>
+                    <p>Careers</p>
+                    <p>Company News</p>
+                    <p>Bass Pro Shops Story</p>
+                    <p>About Our Founder</p>
+                    <p>Our Community</p>
+                    <p>Conservation</p>
+                    <p>Affiliate Program</p>
+                    <p>Cabela's</p>
+                </div>
+                <div>
+                    <h4>SIGN UP FOR EXCLUSIVE DEALS & OFFERS</h4>
+                    <input type="text" placeholder="Enter your email address" id="email">
+                    <p>You can unsubscribe at any time.<span> Contact Us</span> | <span>Privacy Policy</span></p>
+                    <div id="agree">
+                        <div></div>
+                        <p>I agree to receive special offers, promotions, and catalog announcements</p>
+                    </div>
+                    <button>SIGN UP</button>
+                    <hr>
+                    <div id="sms">
+                        <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/images/icons/Redesign/sms-icon.png" alt="error">
+                        <p>Sign Up for SMS Messaging</p>
+                    </div>
+                    <div id="book">
+                        <img src="./assets/book.jpg" alt="error">
+                        <p>Get Our Free Catalog</p>
+                    </div>
+                    <div id="mobile">
+                        <img src="./assets/mobile.jpg" alt="">
+                        <p>Download Our Mobile App</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-3">
+        <div>
+            <h3>FOLLOW US</h3>
+        </div>
+        <div>
+            <img src="./assets/facebook.jpg" alt="error">
+        </div>
+        <div>
+            <img src="./assets/tweeter.jpg" alt="error">
+        </div>
+        <div>
+            <img src="./assets/u tube.jpg" alt="error">
+        </div>
+        <div>
+            <img src="./assets/p.jpg" alt="error">
+        </div>
+        <div>
+            <img src="./assets/instagram.jpg" alt="error">
+        </div>
+        <div>
+            <h3>PROUD PARTNERS</h3>
+        </div>
+        <div>
+            <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/logos/images/toyota/toyota-partner.png" alt="error">
+        </div>
+        <div>
+            <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/logos/images/progressive/progressive-partner.png" alt="error">
+        </div>
+        </div>
+        <div class="footer-4">
+            <div class="card-1">
+                <div>
+                    <p>Gift Card Terms & Conditions</p>
+                </div>
+                <div>
+                    <p> Recall Information</p>
+                </div>
+                <div>
+                    <p><span id="red-2">UPDATED</span> Terms of Use + Community Guidelines</p>
+                </div>
+                <div>
+                    <p> Accessibility Policy</p>
+                </div>
+                <div>
+                    <p><span id="red-2">UPDATED </span>Privacy Policy</p>
+                </div>
+                <div>
+                    <p> CA TSCA Disclosure</p>
+                </div>
+            </div>
+            <div class="card-2">
+                <div>
+                    <p>Do Not Sell Or Share My Personal Information</p>
+                </div>
+                <div>
+                    <p> Errors & Limitations</p>
+                </div>
+                <div>
+                    <p> Site Map</p>
+                </div>
+            </div>
+            <div>
+                <p>If you are using a screen reader and are having problems using this website, please call 1-800-227-7776 for assistance</p>
+            </div>
+            <div>
+                <p>©2006 - 2022 BPS Direct, L.L.C. All Rights Reserved</p>
+            </div>
+        </div>
+        </div>
+</body>
+<script>
+    const API="https://63cac33df36cbbdfc75fad7f.mockapi.io/product";
+    let container=document.getElementById("container");
+    let searchForm=document.querySelector(".searchForm");
+    let fetchedData=[];
+
+    let cartData=JSON.parse(localStorage.getItem("cart"));
+    if(cartData==null){
+        cartData=[];
+    }
+
+    fetchData();
+
+    searchForm.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        let searchParams=searchForm.search.value;
+
+        let filtered=fetchedData.filter((element)=>{
+            if(searchParams==""){
+                desplay(fetchedData);
+            }else if(element.title.toUpperCase().includes(searchParams.toUpperCase())==true){
+                   return true;
+            }else{
+                return false;
+            }
+        });
+        desplay(filtered);
+    });
+
+    async function fetchData(){
+        try {
+       let request=await fetch(API);
+       let data=await request.json();
+       fetchedData=data;
+          desplay(fetchedData);
+        } catch (error) {
+            console.log(error);
+        }
+       
+    }
+
+    function desplay(fetchedData){
+        container.innerHTML="";
+        fetchedData.forEach((product)=>{
+
+            let card=document.createElement("div");
+
+            let img=document.createElement("img");
+            img.setAttribute("src",product.image);
+
+            let title=document.createElement("h3");
+            title.innerText=product.title;
+
+            let rating=document.createElement("h4");
+            rating.innerText="Rating"+" "+product.rating;
+
+            let price=document.createElement("h4");
+            price.innerText=`₹${product.price}`;
+
+            let add_to_cart=document.createElement("button");
+            add_to_cart.innerText="Add to Cart";
+
+            add_to_cart.addEventListener("click",()=>{
+                if(checkDuplicate(product)){
+                    alert("Product already in cart");
+                }else{
+                    cartData.push({...product,quantity:1});
+                localStorage.setItem("cart",JSON.stringify(cartData));
+                alert("Product added to cart");
+                }
+                
+            })
+
+            card.append(img,title,rating,price,add_to_cart);
+            container.append(card);
+        })
+    }
+    desplay(fetchedData);
+
+    function checkDuplicate(product){
+        for(let i=0;i<cartData.length;i++){
+            if(cartData[i].title==product.title){
+                return true;
+            }
+        }
+        return false;
+    }
+</script>
+</html>
