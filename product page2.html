@@ -472,7 +472,7 @@
         </div>
 </body>
 <script>
-    const API="https://63cac33df36cbbdfc75fad7f.mockapi.io/cloths";
+    const API="https://63cac33df36cbbdfc75fad7f.mockapi.io/product";
     let container=document.getElementById("container");
     let fetchedData=[];
 
@@ -501,7 +501,7 @@
             let card=document.createElement("div");
 
             let img=document.createElement("img");
-            img.setAttribute("src",product.images);
+            img.setAttribute("src",product.image);
 
             let title=document.createElement("h3");
             title.innerText=product.title;
