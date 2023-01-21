@@ -96,15 +96,21 @@
         #container1>div>img{
             width:100%;
         }
-        button{
+        .buyBtn{
             font-size: 15px;
             padding: 10px;
+            margin-top: 10px;
            
         }
-        button:hover{
+        .buyBtn:hover{
             background-color: red;
             color: white;
             border: none;
+            cursor: pointer;
+        }
+        .remove:hover{
+            background-color:#274837;
+            color: white;
             cursor: pointer;
         }
         .footerMain{
@@ -254,6 +260,15 @@
     gap:20px;
     font-family: Cabin, sans-serif;
 }
+#form{
+        width:300%;
+        height:40px;
+        display:flex;
+        align-items: center;
+        background-color: #E5E5E5;
+        border-radius: 20px;
+        border: none;
+       }
     </style>
 </head>
 <body>
@@ -287,9 +302,9 @@
         </div>
 </div>
 <div id="navbar-2">
-    <div><img id="logo" src="./assets/Cart Bass.png" alt="error"></div>
+    <div><img id="logo" src="./assets/Bass Pro (1).png" alt="error"></div>
     <div>
-        <form>
+        <form class="searchForm">
             <div id="form">
             <img src="https://img.icons8.com/ios-glyphs/30/null/search--v1.png"/>
             <input type="text" placeholder="What can we help you find?" id="search">
@@ -473,11 +488,27 @@
 </body>
 <script>
      let containerEl=document.getElementById("container1");
+     let searchForm=document.querySelector(".searchForm");
 
      let cartData1=JSON.parse(localStorage.getItem("cart"));
     if(cartData1==null){
         cartData1=[];
     }
+    searchForm.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        let searchParams=searchForm.search.value;
+
+        let filtered=cartData1.filter((element)=>{
+            if(searchParams==""){
+                desplay(cartData1);
+            }else if(element.title.toUpperCase().includes(searchParams.toUpperCase())==true){
+                   return true;
+            }else{
+                return false;
+            }
+        });
+        desplay(filtered);
+    });
 
     function desplay(cartData1){
         containerEl.innerHTML="";
@@ -497,10 +528,46 @@
             let price=document.createElement("h4");
             price.innerText=`₹${product.price}`;
 
+            let quantity=document.createElement("span");
+            quantity.innerText=product.quantity;
+
+            let remove=document.createElement("button");
+            remove.setAttribute("class","remove");
+            remove.innerText="Remove";
+
+            remove.addEventListener("click",()=>{
+                cartData1=cartData1.filter((ele)=>{
+                    return ele.title!==product.title;
+                });
+                localStorage.setItem("cart",JSON.stringify(cartData1));
+                desplay(cartData1);
+            });
+
+            let increment=document.createElement("button");
+            increment.innerText="+";
+
+            increment.addEventListener("click",()=>{
+                product=product.quantity++;
+              
+                localStorage.setItem("cart",JSON.stringify(cartData1)); 
+                desplay(cartData1); 
+            });
+
+            let decrement=document.createElement("button");
+            decrement.innerText="-";
+
+            decrement.addEventListener("click",()=>{
+                product=product.quantity--;
+
+                localStorage.setItem("cart",JSON.stringify(cartData1)); 
+                desplay(cartData1); 
+            })
+
             let Buy=document.createElement("button");
+            Buy.setAttribute("class","buyBtn");
             Buy.innerText="Buy Now";
 
-            card.append(img,title,rating,price,Buy);
+            card.append(img,title,rating,price,increment,quantity,decrement,remove,Buy);
             containerEl.append(card);
         })
     }
