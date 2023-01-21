@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #container1{
+            width:100%;
+            height:auto;
+            display: grid;
+           
+            grid-template-columns: repeat(4,1fr);
+            gap:10px;
+        }
+        #container1>div{
+            width:50%;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+        }
+        #container1>div:hover{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #container1>div>img{
+            width:100%;
+        }
+        button{
+            font-size: 15px;
+            padding: 10px;
+           
+        }
+        button:hover{
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container1">
+    </div>
+</body>
+<script>
+     let containerEl=document.getElementById("container1");
+
+     let cartData1=JSON.parse(localStorage.getItem("cart"));
+    if(cartData1==null){
+        cartData1=[];
+    }
+
+    function desplay(cartData1){
+        containerEl.innerHTML="";
+        cartData1.forEach((product)=>{
+
+            let card=document.createElement("div");
+
+            let img=document.createElement("img");
+            img.setAttribute("src",product.image);
+
+            let title=document.createElement("h3");
+            title.innerText=product.title;
+
+            let rating=document.createElement("h4");
+            rating.innerText="Rating"+" "+product.rating;
+
+            let price=document.createElement("h4");
+            price.innerText=`₹${product.price}`;
+
+            let Buy=document.createElement("button");
+            Buy.innerText="Buy Now";
+
+            card.append(img,title,rating,price,Buy);
+            containerEl.append(card);
+        })
+    }
+    desplay(cartData1);
+</script>
+</html>
