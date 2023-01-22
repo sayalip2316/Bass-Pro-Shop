@@ -97,9 +97,13 @@
             width:100%;
         }
         .buyBtn{
+            width:80%;
+            display: block;
+            margin: auto;
             font-size: 15px;
             padding: 10px;
             margin-top: 10px;
+            margin-bottom: 10px;
            
         }
         .buyBtn:hover{
@@ -362,7 +366,9 @@
 <div>Bargain Cave</div>
 </div>
     <div id="container1">
+        
     </div>
+    <a href="./buy.html"><button class="buyBtn">Buy Now</button></a>
     <div class="footerMain">
         <div class="footer">
             <div class="footer-1">
@@ -596,11 +602,11 @@
                 desplay(cartData1); 
             })
 
-            let Buy=document.createElement("button");
-            Buy.setAttribute("class","buyBtn");
-            Buy.innerText="Buy Now";
+            // let Buy=document.createElement("button");
+            // Buy.setAttribute("class","buyBtn");
+            // Buy.innerText="Buy Now";
 
-            card.append(img,title,rating,price,increment,quantity,decrement,remove,Buy);
+            card.append(img,title,rating,price,increment,quantity,decrement,remove);
             containerEl.append(card);
         })
     }
