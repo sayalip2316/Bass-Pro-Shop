@@ -97,9 +97,13 @@
             width:100%;
         }
         .buyBtn{
-            font-size: 15px;
+            width:80%;
+            display: block;
+            margin:auto;
+            font-size: 20px;
             padding: 10px;
-            margin-top: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
            
         }
         .buyBtn:hover{
@@ -107,6 +111,7 @@
             color: white;
             border: none;
             cursor: pointer;
+           
         }
         .remove:hover{
             background-color:#274837;
@@ -363,6 +368,7 @@
 </div>
     <div id="container1">
     </div>
+   <a href="./buy.html"><button class="buyBtn">Buy now</button></a>
     <div class="footerMain">
         <div class="footer">
             <div class="footer-1">
@@ -596,11 +602,11 @@
                 desplay(cartData1); 
             })
 
-            let Buy=document.createElement("button");
-            Buy.setAttribute("class","buyBtn");
-            Buy.innerText="Buy Now";
+            // let Buy=document.createElement("button");
+            // Buy.setAttribute("class","buyBtn");
+            // Buy.innerText="Buy Now";
 
-            card.append(img,title,rating,price,increment,quantity,decrement,remove,Buy);
+            card.append(img,title,rating,price,increment,quantity,decrement,remove);
             containerEl.append(card);
         })
     }
