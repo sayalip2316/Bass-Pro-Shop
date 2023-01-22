@@ -9,6 +9,7 @@
         *{
             margin: 0px;
             padding: 0px;
+            font-family: Cabin, sans-serif;
         }
         header{
             width:100%;
@@ -16,14 +17,186 @@
         }
         .container{
             width:1170px;
+            position: relative;
             margin:auto;
+        }
+        nav>ul{
+           display:flex;
+        }
+        nav>ul>li{
+            padding:30px 20px;
+            list-style: none;
+        }
+        nav>ul>li a{
+            color:white;
+            text-decoration: none;
+        }
+        .megamenu{
+            position: absolute;
+            top:120%;
+            opacity: 0;
+            visibility: hidden;
+            flex-wrap: wrap;
+            width:100%;
+            transition:2s;
+            display: flex;
+            left:0px;
+            box-shadow:0px 10px 2px 3px lightblue ;
+        }
+        nav>ul>li:hover .megamenu{
+            opacity: 1;
+            top:100%;
+            visibility: visible;
+        }
+        .megamenuitems{
+            flex-basis: 20%;
+            margin: 2%;
+        }
+        .megamenuitems ul li{
+            list-style: none;
+            padding: 7px;
+        }
+        .megamenuitems h3{
+            padding: 10px;
+            background-color:lightgrey;
         }
     </style>
 </head>
 <body>
     <header>
 
-        <div class="container"></div>
+        <div class="container">
+            <nav>
+                <ul>
+                    
+                    <li>
+                        
+                        <a href="#">Fishing</a>
+                       <div class="megamenu">
+                        <div class="megamenuitems">
+                            <h4>FISHING REELS</h4>
+                            <ul>
+                                <li>Baitcast Reels</li>
+                                <li>Spinning Reels</li>
+                                <li>Saltwater Reels</li>
+                                <li>Fly Reels</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>FISHING RODS</h4>
+                            <ul>
+                                <li>Casting Rods</li>
+                                <li>Spinning Rods</li>
+                                <li>Saltwater Rods</li>
+                                <li>Fly Rods</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>ROD AND REEL COMBOS</h4>
+                            <ul>
+                                <li>Baitcast Combos</li>
+                                <li>Spinning Combos</li>
+                                <li>Saltwater Combos</li>
+                                <li>Kids' Fishing Rod & Reel Combos</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>LURES</h4>
+                            <ul>
+                                <li>Hard Bait Lures</li>
+                                <li>Soft Bait Lures</li>
+                                <li>Spinnerbaits & Buzzbaits</li>
+                                <li>Jigs</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>FISHING LINE, HOOKS, & WEIGHTS</h4>
+                            <ul>
+                                <li>Fishing line</li>
+                                <li>Fish Hooks</li>
+                                <li>Weights & Sinkers</li>
+                                <li>Jig Heads</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>FISHING ACCESSORIES</h4>
+                            <ul>
+                                <li>Tools & Pliers</li>
+                                <li>Fillet Knives & Tables</li>
+                                <li>Rod Holders & Racks</li>
+                                <li>Rod & Reel Accessories</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>TACKLE BOXES & BAGS</h4>
+                            <ul>
+                                <li>Tackle Boxes</li>
+                                <li>Tackle Bags</li>
+                                <li>Utility Boxes</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>SALTWATER FISHING</h4>
+                            <ul>
+                                <li>Saltwater Reels</li>
+                                <li>Saltwater Rods</li>
+                                <li>Saltwater Combos</li>
+                                <li>Saltwater Lures</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>ICE FISHING</h4>
+                            <ul>
+                                <li>New Ice Fishing</li>
+                                <li>Shelters and Sleds</li>
+                                <li>Ice Augers</li>
+                                <li>Terminal</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>FLY FISHING</h4>
+                            <ul>
+                                <li>Fly Reels, Rods & Outfits</li>
+                                <li>Fly Line, Leader & Tippet</li>
+                                <li>Fly Fishing Accessories</li>
+                                <li>Flies & Fly Tying</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>FISHING APPAREL & RAIN GEAR</h4>
+                            <h4>FISHING SUNGLASSES</h4>
+                        </div>
+                        <div class="megamenuitems">
+                           <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/flyout/bps/fishing.png" width="100%" alt="error">
+                           <h4>SHOP THE RIG</h4>
+                           <h4>BARGAIN CAVE</h4>
+                           <h4>OUTDOOR TIPD</h4>
+                           <h4>FISHING TOP SELLERS</h4>
+                        </div>
+                       </div>
+                    </li>
+
+                    <li><a href="#">Boating</a></li>
+                    <li><a href="#">Shooting</a></li>
+                    <li><a href="#">Hunting</a></li>
+                    <li><a href="#">Camping</a></li>
+                    <li><a href="#">Clothing</a></li>
+                    <li><a href="#">Footwear</a></li>
+                    <li><a href="#">Ride</a></li>
+                    <li><a href="#">Home & Gifts</a></li>
+                    <li><a href="#">Bargain Cave</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 </body>
 
