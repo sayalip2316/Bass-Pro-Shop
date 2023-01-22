@@ -262,7 +262,40 @@
         background-color: #E5E5E5;
         border-radius: 20px;
         border: none;
-       }
+}
+@media screen and (min-width:500px) and (max-width:1000px){
+    #navbar{
+        display: none;
+    }
+    header{
+        display: none;
+    }
+    #container{
+            width:100%;
+            height:auto;
+            display: grid;
+           
+            grid-template-columns: repeat(2,1fr);
+            gap:10px;
+        }
+    
+}
+@media screen and (min-width:100px) and (max-width:499px) {
+    #navbar{
+        display: none;
+    }
+    header{
+        display: none;
+    }
+    #container{
+            width:100%;
+            height:auto;
+            display: grid;
+           
+            grid-template-columns: repeat(1,1fr);
+            gap:10px;
+        }
+}
     </style>
 </head>
 <body>
