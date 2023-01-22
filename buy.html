@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
+        body{
+            background-color: lightpink;
+        }
         .main{
             width:80%;
             margin:auto;
@@ -130,6 +132,12 @@
         #cartpic>img{
             width:20px;
             height:20px;
+        }
+        @media screen and (min-width:500px) and (max-width:1000px) {
+            .container{
+                flex-direction:column-reverse;
+                margin: auto;
+            }
         }
     </style>
 </head>
