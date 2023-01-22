@@ -76,14 +76,60 @@
             border: none;
             background-color: #E5E5E5;
         }
-       #navbar-3{
-        height:40px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        border: 1px solid #E5E5E5;
-        font-size: 17px;
-       }
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: Cabin, sans-serif;
+        }
+        header{
+            width:100%;
+        }
+        .container{
+            width:1300px;
+            position: relative;
+            margin:auto;
+        }
+        nav>ul{
+           display:flex;
+        }
+        nav>ul>li{
+            padding:30px 20px;
+            list-style: none;
+        }
+        nav>ul>li a{
+            color:black;
+            text-decoration: none;
+        }
+        .megamenu{
+            position: absolute;
+            top:120%;
+            opacity: 0;
+            visibility: hidden;
+            flex-wrap: wrap;
+            width:100%;
+            transition:2s;
+            display: flex;
+            left:0px;
+            box-shadow:0px 10px 2px 3px lightslategray ;
+        }
+        nav>ul>li:hover .megamenu{
+            opacity: 1;
+            top:100%;
+            visibility: visible;
+            background-color: white;
+        }
+        .megamenuitems{
+            flex-basis: 15%;
+            margin: 2%;
+        }
+        .megamenuitems ul li{
+            list-style: none;
+            padding: 7px;
+        }
+        .megamenuitems h3{
+            padding: 10px;
+            background-color:lightgrey;
+        }
        #container{
         width:90%;
         margin: auto;
@@ -558,18 +604,900 @@ hr{
         <img src="./assets/add to cart.jpg" alt="error"></a>
     </div>
 </div>
-<div id="navbar-3">
-<div>Fishing</div>
-<div>Boating</div>
-<div>Shooting</div>
-<div>Hunting</div>
-<div>Camping</div>
-<div>Clothing</div>
-<div>Footwear</div>
-<div>Ride</div>
-<div>Home & Gifts</div>
-<div>Bargain Cave</div>
-</div>
+<header>
+
+    <div class="container">
+        <nav>
+            <ul>
+                
+                <li>
+                    
+                    <a href="#">Fishing</a>
+                   <div class="megamenu">
+                    <div class="megamenuitems">
+                        <h4>FISHING REELS</h4>
+                        <ul>
+                            <li>Baitcast Reels</li>
+                            <li>Spinning Reels</li>
+                            <li>Saltwater Reels</li>
+                            <li>Fly Reels</li>
+                            <li>View All</li>
+                        </ul>
+                    </div>
+                    <div class="megamenuitems">
+                        <h4>FISHING RODS</h4>
+                        <ul>
+                            <li>Casting Rods</li>
+                            <li>Spinning Rods</li>
+                            <li>Saltwater Rods</li>
+                            <li>Fly Rods</li>
+                            <li>View All</li>
+                        </ul>
+                    </div>
+                    <div class="megamenuitems">
+                        <h4>ROD AND REEL COMBOS</h4>
+                        <ul>
+                            <li>Baitcast Combos</li>
+                            <li>Spinning Combos</li>
+                            <li>Saltwater Combos</li>
+                            <li>Kids' Fishing Rod & Reel Combos</li>
+                            <li>View All</li>
+                        </ul>
+                    </div>
+                    <div class="megamenuitems">
+                        <h4>LURES</h4>
+                        <ul>
+                            <li>Hard Bait Lures</li>
+                            <li>Soft Bait Lures</li>
+                            <li>Spinnerbaits & Buzzbaits</li>
+                            <li>Jigs</li>
+                            <li>View All</li>
+                        </ul>
+                    </div>
+                    <div class="megamenuitems">
+                        <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/flyout/bps/fishing.png" width="100%" alt="error">
+                        <h4>SHOP THE RIG</h4>
+                        <h4>BARGAIN CAVE</h4>
+                        <h4>OUTDOOR TIPD</h4>
+                        <h4>FISHING TOP SELLERS</h4>
+                     </div>
+                    <div class="megamenuitems">
+                        <h4>FISHING LINE, HOOKS, & WEIGHTS</h4>
+                        <ul>
+                            <li>Fishing line</li>
+                            <li>Fish Hooks</li>
+                            <li>Weights & Sinkers</li>
+                            <li>Jig Heads</li>
+                            <li>View All</li>
+                        </ul>
+                    </div>
+                    <div class="megamenuitems">
+                        <h4>FISHING ACCESSORIES</h4>
+                        <ul>
+                            <li>Tools & Pliers</li>
+                            <li>Fillet Knives & Tables</li>
+                            <li>Rod Holders & Racks</li>
+                            <li>Rod & Reel Accessories</li>
+                            <li>View All</li>
+                        </ul>
+                    </div>
+                    <div class="megamenuitems">
+                        <h4>TACKLE BOXES & BAGS</h4>
+                        <ul>
+                            <li>Tackle Boxes</li>
+                            <li>Tackle Bags</li>
+                            <li>Utility Boxes</li>
+                        </ul>
+                    </div>
+                    <div class="megamenuitems">
+                        <h4>SALTWATER FISHING</h4>
+                        <ul>
+                            <li>Saltwater Reels</li>
+                            <li>Saltwater Rods</li>
+                            <li>Saltwater Combos</li>
+                            <li>Saltwater Lures</li>
+                            <li>View All</li>
+                        </ul>
+                    </div>
+                    <div class="megamenuitems">
+                        <h4>ICE FISHING</h4>
+                        <ul>
+                            <li>New Ice Fishing</li>
+                            <li>Shelters and Sleds</li>
+                            <li>Ice Augers</li>
+                            <li>Terminal</li>
+                            <li>View All</li>
+                        </ul>
+                    </div>
+                    <div class="megamenuitems">
+                        <h4>FLY FISHING</h4>
+                        <ul>
+                            <li>Fly Reels, Rods & Outfits</li>
+                            <li>Fly Line, Leader & Tippet</li>
+                            <li>Fly Fishing Accessories</li>
+                            <li>Flies & Fly Tying</li>
+                            <li>View All</li>
+                        </ul>
+                    </div>
+                    <div class="megamenuitems">
+                        <h4>FISHING APPAREL & RAIN GEAR</h4>
+                        <h4>FISHING SUNGLASSES</h4>
+                    </div>
+                    
+                   </div>
+                </li>
+                <li><a href="#">Boating</a>
+                    <div class="megamenu">
+                        <div class="megamenuitems">
+                            <h4>MARINE ELECTRONICS</h4>
+                            <ul>
+                                <li>Fish finder & Nevigation</li>
+                                <li>Sonar Accessories</li>
+                                <li>Marine Radios & Stereos</li>
+                                <li>Marine Mounts & Cases</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>BOAT ACCESSORIES</h4>
+                            <ul>
+                                <li>Anchoring, Rope & Docking</li>
+                                <li>Rod Holders & Fishing Accessories</li>
+                                <li>Chargers & Portable Power</li>
+                                <li>Cleaning Supplies & Organization</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>BOAT SEATS & FURNITURE</h4>
+                            <ul>
+                                <li>Boat Seats</li>
+                                <li>Mounts & Pedestals </li>
+                                <li>Pontoon Furniture</li>
+                                <li>Grills, Tables & Umbrellas</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>BOAT COVERS & BIMINIS</h4>
+                            <ul>
+                                <li>Custom Fit Covers</li>
+                                <li>Universal Covers</li>
+                                <li>Bimini Tops</li>
+                                <li>Cover Accessories & Tie Downs</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/flyout/bps/boating.png" width="100%" alt="error">
+                            <h4>ELECTRONICS TRAINING</h4>
+                            <h4>BOATING CENTER</h4>
+                            <h4>BARGAIN CAVE</h4>
+                            <h4>OUTDOOR TIPS</h4>
+                         </div>
+                        <div class="megamenuitems">
+                            <h4>TROLLING MOTORS</h4>
+                            <ul>
+                                <li>Freshwater Trolling Motors</li>
+                                <li>Saltwater Trolling Motors</li>
+                                <li>Trolling Motor Accessories</li>
+                               
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>FISHING ACCESSORIES</h4>
+                            <ul>
+                                <li>Tools & Pliers</li>
+                                <li>Fillet Knives & Tables</li>
+                                <li>Rod Holders & Racks</li>
+                                <li>Rod & Reel Accessories</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>TRAILER ACCESSORIES</h4>
+                            <ul>
+                                <li>Guide-Ons, Brackets & Rollers</li>
+                                <li>Winches & Tie Downs</li>
+                                <li>Trailer Hitches</li>
+                                <li>Tires & Wheel Accessories</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>OUTBOARD MOTOR ACCESSORIES</h4>
+                            <ul>
+                                <li>Props & Accessories</li>
+                                <li>Oils & Accessories</li>
+                                <li>Fuel Tanks & Accessories</li>
+                                <li>Gauges & Controls</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>KAYAKS & CANOES</h4>
+                            <ul>
+                                <li>Kayaks & Fishing Kayaks</li>
+                                <li>Kayak & Canoe Accessories</li>
+                                <li>Paddles & Oars</li>
+                                <li>Stand-Up Paddle Boards</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>WATER SPORTS</h4>
+                            <ul>
+                                <li>Life Jackets</li>
+                                <li>Towables & Skis</li>
+                                <li>Water & Pool Toys</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>SMALL BOATS</h4>
+                            <h4>NEW BOATING</h4>
+                            <h4>BOATING SALE</h4>
+                        </div>
+                       
+                       </div>
+                </li>
+                <li><a href="#">Shooting</a>
+                    <div class="megamenu">
+                        <div class="megamenuitems">
+                            <h4>GUNS</h4>
+                            <ul>
+                                <li>Centerfire Pistol</li>
+                                <li>Centerfire Reflies</li>
+                                <li>Rimfire Rifle</li>
+                                <li>Shotguns</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>AMMUNITION</h4>
+                            <ul>
+                                <li>Centerfire Rifle Ammo</li>
+                                <li>Handgun Ammo</li>
+                                <li>Ramfire Ammo</li>
+                                <li>Shotshell Ammo</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>OPTICS & SCOPES</h4>
+                            <ul>
+                                <li>Binoculars</li>
+                                <li>Scopes</li>
+                                <li>rangefinders</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>SHOOTING ACCESSORIES</h4>
+                            <ul>
+                                <li>Eye & Ear protection</li>
+                                <li>Holsters</li>
+                                <li>Sticks/Bipods/Rests</li>
+                                <li>Targets & Trap Throwers</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/flyout/bps/shooting.png" width="100%" alt="error">
+                            <h4>BARGAIN CAVE</h4>
+                            <h4>OUTDOOR TIPD</h4>
+                         </div>
+                        <div class="megamenuitems">
+                            <h4>GUN STORAGE</h4>
+                            <ul>
+                                <li>Gun Cabinets & Concealment</li>
+                                <li>Gun safes & vaults</li>
+                                <li>Gun Socks</li>
+                                <li>Rifle,Shotgun & Pistol Cases</li>
+                               
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>GUN PARTS</h4>
+                            <ul>
+                                <li>Choke Tubes</li>
+                                <li>Firearm Sights</li>
+                                <li>Magazines</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>RELOADING SUPPLIES</h4>
+                            <ul>
+                                <li>Bullets & Brass</li>
+                                <li>Dies & Shell Holders</li>
+                                <li>Presses and Benches</li>
+                                <li>Primers & Powder</li>
+                                <li>View all</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>BLACK POWDER GUNS & ACCESSORIES</h4>
+                            <ul>
+                                <li>Black Powder Guns</li>
+                                <li>Black Powder Bullets</li>
+                                <li>Black Powder Accessories</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>RECREATIONAL SHOOTING</h4>
+                            <ul>
+                                <li>Airsoft Guns & Accessories</li>
+                                <li>Slingshots</li>
+                                <li>Blowguns & Accessories</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>PERSONAL DEFENCE</h4>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>NEW SHOOTING</h4>
+                            <h4>SHOOTING SALE</h4>
+                        </div>
+                        <div class="megamenuitems">
+                           <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/flyout/bps/shooting.png" width="100%" alt="error">
+                           <h4>BARGAIN CAVE</h4>
+                           <h4>OUTDOOR TIPD</h4>
+                        </div>
+                       </div>
+                </li>
+                <li><a href="#">Hunting</a>
+                    <div class="megamenu">
+                        <div class="megamenuitems">
+                            <h4>ARCHERY</h4>
+                            <ul>
+                                <li>Bows</li>
+                                <li>Arrows & Accessories</li>
+                                <li>Broadheads & Field Points</li>
+                                <li>CrossBows and Accessories</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>OPTICS & SCOPES</h4>
+                            <ul>
+                                <li>Binocular</li>
+                                <li>Scopes</li>
+                                <li>rangefinders</li>
+                                <li>Spotting Scopes</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>HUNTING ACCESSORIES</h4>
+                            <ul>
+                                <li>2 Way Radios And GPS</li>
+                                <li>Ground Blinds</li>
+                                <li>Scent Elimination</li>
+                                <li>Scents</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>TREE STANDS</h4>
+                            <ul>
+                                <li>Ladder Stands</li>
+                                <li>Fixed Position Stands</li>
+                                <li>Climbing Stands</li>
+                                <li>Box Blinds</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/flyout/bps/hunting.png" width="100%" alt="error">
+                            <h4>OUTDOOR TIPD</h4>
+                            <h4>FISHING TOP SELLERS</h4>
+                         </div>
+                        <div class="megamenuitems">
+                            <h4>TRAIL CAMERAS & ACCESSORIES</h4>
+                            <ul>
+                                <li>Camera</li>
+                                <li>Camera Acccessories</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>FOOD PLOTS & FEEDING</h4>
+                            <ul>
+                                <li>Feed/Attractants/Minerals</li>
+                                <li>Food Plot Seeds Accessories</li>
+                                <li>Game Feeders </li>
+                               
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>GAME CALLS </h4>
+                            <ul>
+                                <li>Turkey calls</li>
+                                <li>Big Game Calls</li>
+                                <li>Predator Calls</li>
+                                <li>Waterfowl Calls</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>DECOYS</h4>
+                            <ul>
+                                <li>Duck & Goose decoys</li>
+                                <li>Big Game Decoys</li>
+                                <li>Predators Decoys</li>
+                                <li>Turkey Decoyes</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>KNIVES & TOOLS</h4>
+                            <ul>
+                                <li>Knives</li>
+                                <li>Pocket Knives</li>
+                                <li>Multi Tools</li>
+                                <li>Saws, Machets & Axes</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>DOG TRAINING</h4>
+                            <ul>
+                                <li>Electronic Dog Training</li>
+                                <li>Training Supplies</li>
+                                <li>Bedding Shelters</li>
+                                <li>Chews, Treats & Toys</li>
+                               
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>GAME & FOOD PROCESSING</h4>
+                            <ul>
+                            <li>Meat Grinders</li>
+                            <li>Vaccum Sealers</li>
+                            <li>Dehydrators</li>
+                            <li>Slicers</li>
+                            <li>View All</li>
+                        </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>HUNTING CLOTHING</h4>
+                            <ul>
+                                <li>Men's Hunting Clothing</li>
+                                <li>women's Hunting Clothing</li>
+                                <li>Kid's Hunting Clothing</li>
+                                <li>Tactical Clothing</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        
+                       </div>
+                </li>
+                <li><a href="#">Camping</a>
+                    <div class="megamenu">
+                        <div class="megamenuitems">
+                            <h4>TENTS</h4>
+                            <ul>
+                                <li>Dome Tents</li>
+                                <li>backpack Tents</li>
+                                <li>Truck Tents</li>
+                                <li>Tent Accessories</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>SLEEPING GEAR</h4>
+                            <ul>
+                                <li>Sleeping Bags</li>
+                                <li>Sleeping Pads</li>
+                                <li>Cots</li>
+                                <li>Hammocks</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>LIGHTING</h4>
+                            <ul>
+                                <li>Flashlights</li>
+                                <li>Headlamps</li>
+                                <li>Lanterns</li>
+                                <li>Batteries</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>CAMP ESSENTIALS</h4>
+                            <ul>
+                                <li>Camp Chairs & Furniture</li>
+                                <li>Camp Accessories</li>
+                                <li>Drinkware</li>
+                                <li>Generators</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/flyout/bps/camping.png" width="100%" alt="error">
+                           
+                            <h4>BARGAIN CAVE</h4>
+                            <h4>OUTDOOR TIPD</h4>
+                            
+                         </div>
+                         <div class="megamenuitems">
+                            <h4>NEW CAMPING</h4>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>CAMPING SALES</h4>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>CAMP KITCHEN</h4>
+                            <ul>
+                                <li>Coolers</li>
+                                <li>Camp Cookware</li>
+                                <li>Camp Stove</li>
+                                <li>Camp food</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>PACKS & BAGS</h4>
+                            <ul>
+                                <li>Bags</li>
+                                <li>Packs</li>
+                                <li>Hydration Packs</li>
+                                <li>Hunting Paks & Bags</li>
+                               
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>METAL DETECTING & PROSPECTING</h4>
+                           
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>SURVIVAL/FIRST AID</h4>
+                           
+                        </div>
+                       
+                      
+                       </div>
+                </li>
+                <li><a href="#">Clothing</a>
+                    <div class="megamenu">
+                        <div class="megamenuitems">
+                            <h4>MEN'S CLOTHING</h4>
+                            <ul>
+                                <li>Jackets, Coats & Outerwear</li>
+                                <li>Shirts & Tops</li>
+                                <li>Pants & Shorts</li>
+                                <li>Clothing Accessories</li>
+                                <li>Hats & Caps</li>
+                                <li>Fishing Clothing</li>
+                                <li>Rain Gear</li>
+                                <li>Swimwear</li>
+                                <li>Big & Tall Clothing</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>WOMEN'S CLOTHING</h4>
+                            <ul>
+                                <li>Jackets, Coats & Outerwear</li>
+                                <li>Shirts & Tops</li>
+                                <li>Pants & Shorts</li>
+                                <li>Clothing Accessories</li>
+                                <li>Hats & Caps</li>
+                                <li>Fishing Clothing</li>
+                                <li>Rain Gear</li>
+                                <li>Swimwear</li>
+                                <li>Big & Tall Clothing</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>KID'S CLOTHING</h4>
+                            <ul>
+                                <li>Jackets, Coats & Outerwear</li>
+                                <li>Shirts & Tops</li>
+                                <li>Pants & Shorts</li>
+                                <li>Clothing Accessories</li>
+                                <li>Hats & Caps</li>
+                                <li>Fishing Clothing</li>
+                                <li>Rain Gear</li>
+                                <li>Swimwear</li>
+                                <li>Big & Tall Clothing</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>HUNTNG CLOTHINGS</h4>
+                            <ul>
+                                <li>Men's Hunting Clothing</li>
+                                <li>women's Hunting Clothing</li>
+                                <li>Kid's Hunting Clothing</li>
+                                <li>Tactical Clothing</li>
+                                <li>Scent Control Hunting</li>
+                                <li>Clothing</li>
+                                <li>Hunting Waders</li>
+                                <li>waterfowl Hunting Clothing</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/flyout/bps/clothing.png" width="100%" alt="error">
+                            
+                            <h4>BARGAIN CAVE</h4>
+                            <h4>OUTDOOR TIPD</h4>
+                           
+                         </div>
+                         <div class="megamenuitems">
+                            <h4>BATTERY HEATED TECHNOLOGY</h4>
+                            
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>SUNGLASSES</h4>
+                            
+                        </div>
+                       
+                        <div class="megamenuitems">
+                            <h4>JEWELRY</h4>
+                           
+                        </div>
+                       
+                        <div class="megamenuitems">
+                            <h4>WATCHES</h4> 
+                        </div>
+                       </div>
+                </li>
+                <li><a href="#">Footwear</a>
+                    <div class="megamenu">
+                        <div class="megamenuitems">
+                            <h4>MEN'S SHOES & BOOTS</h4>
+                            <ul>
+                                <li>Hunting Boots</li>
+                                <li>Hicking Boots</li>
+                                <li>Work Boots</li>
+                                <li>Rubber Boots</li>
+                                <li>Casual Shoes & Boots</li>
+                                <li>Boat & Deck Shoes</li>
+                                <li>Athletic shoes</li>
+                                <li>Western Boots</li>
+                                <li>Sandals</li>
+                                <li>Slippers</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>WOMEN'S SHOES & BOOTS</h4>
+                            <ul>
+                                <li>Hunting Boots</li>
+                                <li>Hicking Boots</li>
+                                <li>Work Boots</li>
+                                <li>Rubber Boots</li>
+                                <li>Casual Shoes & Boots</li>
+                                <li>Boat & Deck Shoes</li>
+                                <li>Athletic shoes</li>
+                                <li>Western Boots</li>
+                                <li>Sandals</li>
+                                <li>Slippers</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>KIDS SHOES & BOOTS</h4>
+                            <ul>
+                                <li>Hunting Boots</li>
+                                <li>Hicking Boots</li>
+                                <li>Work Boots</li>
+                                <li>Rubber Boots</li>
+                                <li>Casual Shoes & Boots</li>
+                                <li>Boat & Deck Shoes</li>
+                                <li>Athletic shoes</li>
+                                <li>Western Boots</li>
+                                <li>Sandals</li>
+                                <li>Slippers</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>WADERS</h4>
+                            <ul>
+                                <li>Hunting Waders</li>
+                                <li>Waders</li>
+                                <li>Wedding Boots</li>
+                                <li>Weder Accessories</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/Web-Main/2022/Dept-Pages/Footwear/wk38/Flyout-footwear-new.jpg" width="100%" alt="error">
+                            <h4>BARGAIN CAVE</h4>
+                            <h4>OUTDOOR TIPD</h4>
+                         </div>
+                        <div class="megamenuitems">
+                            <h4>SOCKS</h4>
+                           
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>SHOES & BOOT ACCESSORIES</h4>
+                            
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>NEW SHOES & BOOTS</h4>
+                           
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>SHOES & BOOTS SALE</h4>
+                        </div>  
+                </li>
+                <li><a href="#">Ride</a>
+                    <div class="megamenu">
+                        <div class="megamenuitems">
+                            <h4>BIKE & ACCESSORIES</h4>
+                            <ul>
+                                <li>Mountain Bikes</li>
+                                <li>Hybrid Bikes</li>
+                                <li>Kid's Bikes</li>
+                                <li>Bike Helmets</li>
+                                <li>Bike Parts & Accessories</li>
+                                <li>Bike Racks & Storage</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>Truck & Auto</h4>
+                            <ul>
+                                <li>Interior Accessories</li>
+                                <li>Exterior Accessories</li>
+                                <li>Camper & RV</li>
+                                <li>maintenance & Organization</li>
+                                <li>Outdoor Power Equipment</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>TRAILER ACCESSORIES</h4>
+                            <ul>
+                                <li>Guid-One, Bracket & Rollers</li>
+                                <li>Winches & Tie Downs</li>
+                                <li>Trailer Hitches</li>
+                                <li>Tires & Wheel Accessories</li>
+                                <li>Jacket & Dollies</li>
+                                <li>Wiring & Lights</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>ATV ACCESSORIES</h4>
+                            <ul>
+                                <li>ATV/UTV Accessories</li>
+                                <li>Racks/Bags & Storage</li>
+                                <li>Implements & Tools</li>
+                                <li>Helmets and Googles</li>
+                                <li>Ramps and Towing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="megamenuitems">
+                           <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/flyout/bps/auto-atv.png" width="100%" alt="error">
+                           <h4>BARGAIN CAVE</h4>
+                           <h4>OUTDOOR TIPD</h4>
+                        </div>
+                       </div>
+                </li>
+                <li><a href="#">Home & Gifts</a>
+                    <div class="megamenu">
+                        <div class="megamenuitems">
+                            <h4>HOME DECOR</h4>
+                            <ul>
+                                <li>Bedding</li>
+                                <li>Wall Decor</li>
+                                <li>Area Rugs & Door Mats</li>
+                                
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>FISHING RODS</h4>
+                            <ul>
+                                <li>Casting Rods</li>
+                                <li>Spinning Rods</li>
+                                <li>Saltwater Rods</li>
+                                <li>Fly Rods</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>ROD AND REEL COMBOS</h4>
+                            <ul>
+                                <li>Baitcast Combos</li>
+                                <li>Spinning Combos</li>
+                                <li>Saltwater Combos</li>
+                                <li>Kids' Fishing Rod & Reel Combos</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>LURES</h4>
+                            <ul>
+                                <li>Hard Bait Lures</li>
+                                <li>Soft Bait Lures</li>
+                                <li>Spinnerbaits & Buzzbaits</li>
+                                <li>Jigs</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/flyout/bps/home-gifts-v2.png" width="100%" alt="error">
+                            <h4>SHOP THE RIG</h4>
+                            <h4>BARGAIN CAVE</h4>
+                            <h4>OUTDOOR TIPD</h4>
+                            <h4>FISHING TOP SELLERS</h4>
+                         </div>
+                        <div class="megamenuitems">
+                            <h4>FISHING LINE, HOOKS, & WEIGHTS</h4>
+                            <ul>
+                                <li>Fishing line</li>
+                                <li>Fish Hooks</li>
+                                <li>Weights & Sinkers</li>
+                                <li>Jig Heads</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>FISHING ACCESSORIES</h4>
+                            <ul>
+                                <li>Tools & Pliers</li>
+                                <li>Fillet Knives & Tables</li>
+                                <li>Rod Holders & Racks</li>
+                                <li>Rod & Reel Accessories</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>TACKLE BOXES & BAGS</h4>
+                            <ul>
+                                <li>Tackle Boxes</li>
+                                <li>Tackle Bags</li>
+                                <li>Utility Boxes</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>SALTWATER FISHING</h4>
+                            <ul>
+                                <li>Saltwater Reels</li>
+                                <li>Saltwater Rods</li>
+                                <li>Saltwater Combos</li>
+                                <li>Saltwater Lures</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>ICE FISHING</h4>
+                            <ul>
+                                <li>New Ice Fishing</li>
+                                <li>Shelters and Sleds</li>
+                                <li>Ice Augers</li>
+                                <li>Terminal</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>FLY FISHING</h4>
+                            <ul>
+                                <li>Fly Reels, Rods & Outfits</li>
+                                <li>Fly Line, Leader & Tippet</li>
+                                <li>Fly Fishing Accessories</li>
+                                <li>Flies & Fly Tying</li>
+                                <li>View All</li>
+                            </ul>
+                        </div>
+                        <div class="megamenuitems">
+                            <h4>FISHING APPAREL & RAIN GEAR</h4>
+                            <h4>FISHING SUNGLASSES</h4>
+                        </div>
+                        <div class="megamenuitems">
+                           <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/flyout/bps/fishing.png" width="100%" alt="error">
+                           <h4>SHOP THE RIG</h4>
+                           <h4>BARGAIN CAVE</h4>
+                           <h4>OUTDOOR TIPD</h4>
+                           <h4>FISHING TOP SELLERS</h4>
+                        </div>
+                       </div>
+                </li>
+                <li><a href="#">Bargain Cave</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 <div id="container">
     <div>
         <img id="image1" src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_1920/v1673277784/DigitalCreative/2023/Homepage/wk2-1-11/BPS_Homepage-winter.png" alt="error">
